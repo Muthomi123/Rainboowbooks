@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rainbow Books — Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="images/Rainbow-Book.jpg" alt="Logo" class="me-2 logo">
+          <div>
+            <div class="brand-title">Rainbow Books</div>
+            <small class="brand-sub">Books at the end of the rainbow</small>
+          </div>
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMain">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="bookstore.html">Bookstore</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="publishing.html">Publishing</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item ms-3">
+              <a class="btn btn-outline-primary" href="checkout.html">
+                Cart <span id="cart-count" class="badge bg-primary ms-1">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main class="container my-5">
+    <section class="hero row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-6">Rediscover reading. Rediscover community.</h1>
+        <p class="lead">Rainbow Books blends the pleasure of browsing in-store with modern online convenience — events, author support, and curated recommendations.</p>
+        <p>
+          <a class="btn btn-primary me-2" href="bookstore.html">Shop Books</a>
+          <a class="btn btn-outline-secondary" href="events.html">See Events</a>
+        </p>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="images/22.jpg" alt="bookstore" class="img-fluid rounded shadow-sm">
+      </div>
+    </section>
+
+    <!-- Featured -->
+    <section class="mt-5">
+      <h2 class="h4 mb-3">Featured titles</h2>
+      <div id="featuredRow" class="row g-3">
+        <!-- JS will inject featured cards -->
+      </div>
+    </section>
+
+    <!-- Why Rainbow Books -->
+    <section class="mt-5">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card minimal-card p-3">
+            <h3 class="h6">Local expertise</h3>
+            <p class="small">Staff picks, local author events, and curated lists that big sites can't replicate.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card minimal-card p-3">
+            <h3 class="h6">Community events</h3>
+            <p class="small">Book clubs, signings, and workshops that bring readers together.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card minimal-card p-3">
+            <h3 class="h6">Support for authors</h3>
+            <p class="small">Publishing services, editorial guidance, and in-store promotion for authors.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="mt-5 bg-light p-4 rounded">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h4 class="mb-1">Stay in the loop</h4>
+          <p class="small mb-0">Monthly newsletter: events, staff picks and exclusive offers.</p>
+        </div>
+        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+          <form class="d-flex" onsubmit="event.preventDefault(); alert('Subscribed (prototype)')">
+            <input class="form-control me-2" placeholder="Your email">
+            <button class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer bg-white py-4 border-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <strong>Rainbow Books</strong> — Melbourne, VIC<br>
+        <small class="text-muted">© <span id="year"></span> Rainbow Books (prototype)</small>
+      </div>
+      <div>
+        <a href="#" class="me-3 small">Privacy</a>
+        <a href="#" class="small">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    initHomepage(); // function in main.js to populate featured
+  </script>
+</body>
+</html>
