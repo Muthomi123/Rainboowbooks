@@ -1,0 +1,84 @@
+:root{
+  --accent: #0d6efd;
+  --muted: #6c757d;
+  --bg: #ffffff;
+  --card: #fbfbfc;
+  --radius: 12px;
+  --brand: #0b5cff;
+  --brand-2: #0a58ca;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+body{
+  background: var(--bg);
+  color: #212529;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-size: 15px;
+}
+
+.site-header, .site-footer {
+  background: var(--bg);
+}
+
+/* Brand */
+.brand-title{
+  font-weight:600;
+  font-size:1rem;
+  color: #111827;
+}
+.brand-sub{
+  font-size: 0.75rem;
+  color: var(--muted);
+  line-height:1;
+}
+
+/* Logo */
+.logo{
+  border-radius:8px;
+}
+
+/* Hero */
+.hero img{ border-radius: 12px; }
+
+/* Cards */
+.minimal-card{
+  border: 1px solid #eef1f5;
+  background: var(--card);
+  border-radius: 12px;
+}
+
+/* Product card */
+.product-card{
+  border: 1px solid #e6e9ee;
+  border-radius: 12px;
+  transition: transform .12s ease, box-shadow .12s ease;
+  background: #fff;
+}
+.product-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(6,24,46,.06);
+}
+.product-card .price{
+  font-weight:600;
+  color:var(--brand);
+}
+
+/* Footer */
+.site-footer { font-size: 0.9rem; color: var(--muted); }
+
+/* Buttons */
+.btn-primary{
+  background: linear-gradient(180deg,var(--brand),var(--brand-2));
+  border: none;
+}
+.btn-outline-primary{
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+/* Responsive tweaks */
+@media (max-width:991px){
+  .hero{ text-align:center; }
+  .hero .col-lg-6{ margin-bottom: 1.25rem; }
+}
